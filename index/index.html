@@ -185,6 +185,36 @@
   }
   .hero-sidebar-rule { width: 24px; height: 1px; background: var(--rule); margin-bottom: 20px; }
   .hero-sidebar-note { font-size: 10.5px; color: var(--faint); font-weight: 300; letter-spacing: 0.04em; }
+  .call-strip {
+    background: var(--charcoal);
+    padding: 28px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .call-strip-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(242,238,232,0.55);
+    letter-spacing: -0.01em;
+  }
+  .call-strip-btn {
+    background: var(--caramel);
+    color: var(--ivory);
+    padding: 13px 28px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .call-strip-btn:hover { background: var(--caramel-dk); }
 
   /* INDUSTRIES */
   #industries { background: var(--charcoal); border-bottom: 1px solid rgba(255,255,255,0.05); }
@@ -669,6 +699,8 @@
     .cta-email-row { grid-template-columns: 1fr; gap: 10px; }
     .cta-email-line { display: none; }
     .industry-row { grid-template-columns: 1fr 1fr; }
+    .call-strip { padding: 24px; }
+    .call-strip-title { font-size: 18px; }
     .work-grid { grid-template-columns: 1fr; }
     .service-row { grid-template-columns: 40px 1fr; }
     .svc-desc { display: none; }
@@ -880,7 +912,10 @@
 
 
 <!-- STRATEGY CALL STRIP -->
-<div style="background:var(--charcoal);padding:28px 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06);"><span style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:rgba(242,238,232,0.55);letter-spacing:-0.01em;">Every project begins with a conversation.</span><a href="#cta" style="background:var(--caramel);color:var(--ivory);padding:13px 28px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;font-family:'DM Sans',sans-serif;transition:background 0.2s;flex-shrink:0;" onmouseover="this.style.background='#7A5230'" onmouseout="this.style.background='#96663E'">Book a Strategy Call</a></div>
+<div class="call-strip">
+  <span class="call-strip-title">Every project begins with a conversation.</span>
+  <a href="#cta" class="call-strip-btn">Book a Strategy Call</a>
+</div>
 </section>
 
 <!-- INDUSTRIES -->
@@ -1431,7 +1466,7 @@
       </div>
       <div class="cta-email-row">
         <span class="cta-email-label">Prefer email?</span>
-        <a href="mailto:belledigitalstudio@gmail.com" class="cta-email">belledigitalstudio@gmail.com</a>
+        <a href="mailto:belledigitalstudio1@gmail.com" class="cta-email">belledigitalstudio1@gmail.com</a>
         <span class="cta-email-line"></span>
       </div>
     </div>
