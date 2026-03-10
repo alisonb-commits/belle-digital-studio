@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <title>Construction Company Website Design | Meridian Build Group Case Study</title>
+  <meta name="description" content="Brand identity and website redesign for Meridian Build Group — repositioning a construction company for commercial credibility.">
+  <link rel="canonical" href="https://belledigitalstudio.com.au/case-studies/meridian-build-group.html" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meridian Build Group | Construction Website Design Case Study">
+  <meta property="og:description" content="Brand identity and website redesign repositioning a construction firm for commercial credibility.">
+  <meta property="og:url" content="https://belledigitalstudio.com.au/case-studies/meridian-build-group.html">
+  <meta property="og:site_name" content="Belle Digital Studio">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Meridian Build Group | Construction Website Design Case Study">
+  <meta name="twitter:description" content="Brand identity and website redesign repositioning a construction firm for commercial credibility.">
+  <meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F2EEE8;--ivory-deep:#E8E2D9;--rule:#D4CCC2;
+  --charcoal:#1A1916;--mid:#3C3830;--muted:#7A7368;
+  --faint:#B2AAA0;--caramel:#96663E;--caramel-dk:#7A5230;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"DM Sans",sans-serif;background:var(--ivory);color:var(--charcoal);font-size:14px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);font-weight:400;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;background:rgba(242,238,232,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);display:flex;align-items:center;padding:0 56px;justify-content:space-between;}
+.nav-logo{font-family:"Cormorant Garamond",serif;font-size:15px;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;}
+.nav-links{list-style:none;display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--charcoal);}
+.nav-cta-link{color:var(--ivory)!important;background:var(--charcoal);padding:9px 20px;transition:background 0.2s!important;}
+.nav-cta-link:hover{background:var(--caramel)!important;}
+
+/* HERO BAND */
+.cs-hero{padding-top:64px;display:grid;grid-template-columns:1fr 1fr;min-height:520px;border-bottom:1px solid var(--rule);}
+.cs-hero-left{padding:72px 56px;display:flex;flex-direction:column;justify-content:flex-end;border-right:1px solid var(--rule);}
+.cs-num{font-family:"Cormorant Garamond",serif;font-size:80px;font-weight:300;line-height:1;color:var(--rule);letter-spacing:-0.02em;display:block;margin-bottom:20px;}
+.cs-industry-tag{font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;display:block;}
+.cs-hero-title{font-family:"Cormorant Garamond",serif;font-size:clamp(36px,3.8vw,52px);font-weight:400;line-height:1.1;letter-spacing:-0.01em;margin-bottom:20px;}
+.cs-hero-title em{font-style:italic;font-weight:300;color:var(--caramel);}
+.cs-tagline{font-size:14px;color:var(--muted);font-weight:300;line-height:1.8;max-width:380px;margin-bottom:32px;border-left:1px solid var(--rule);padding-left:18px;}
+.cs-tags-row{display:flex;gap:8px;flex-wrap:wrap;}
+.cs-tag{font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--caramel);border:1px solid rgba(150,102,62,0.25);padding:4px 10px;}
+.cs-hero-right{position:relative;overflow:hidden;}
+.cs-hero-right img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1080px;margin:0 auto;padding:20px 56px;display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--rule);}
+.breadcrumb a{color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--charcoal);}
+.breadcrumb span{color:var(--rule);}
+
+/* CONTENT */
+.cs-content{display:grid;grid-template-columns:240px 1fr;border-bottom:1px solid var(--rule);}
+.cs-sidebar{padding:56px 40px 56px 56px;border-right:1px solid var(--rule);}
+.cs-sidebar-section{margin-bottom:40px;}
+.cs-sidebar-section:last-child{margin-bottom:0;}
+.cs-sidebar-label{font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--caramel);display:block;margin-bottom:12px;}
+.cs-sidebar-section p{font-size:12.5px;color:var(--muted);line-height:1.75;font-weight:300;}
+.cs-sidebar-list{list-style:none;}
+.cs-sidebar-list li{font-size:12.5px;color:var(--muted);font-weight:300;padding:5px 0;border-bottom:1px solid var(--rule);line-height:1.5;}
+.cs-sidebar-list li:last-child{border-bottom:none;}
+.cs-main{padding:56px;}
+.cs-section{margin-bottom:56px;}
+.cs-section:last-child{margin-bottom:0;}
+.cs-section-label{font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:16px;}
+.cs-section h3{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:400;color:var(--charcoal);line-height:1.2;margin-bottom:16px;letter-spacing:-0.01em;}
+.cs-section h3 em{font-style:italic;font-weight:300;}
+.cs-section p{font-size:14px;color:var(--mid);line-height:1.85;font-weight:300;max-width:580px;margin-bottom:16px;}
+.cs-section p:last-child{margin-bottom:0;}
+.cs-improvements{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-top:24px;}
+.cs-improvement{padding:20px 24px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;align-items:flex-start;gap:12px;}
+.ci-check{color:var(--caramel);font-size:11px;flex-shrink:0;margin-top:2px;}
+.ci-text{font-size:12.5px;color:var(--mid);font-weight:300;line-height:1.5;}
+.cs-results-row{display:flex;gap:0;border:1px solid var(--rule);margin-top:24px;background:var(--charcoal);}
+.cs-result{flex:1;padding:28px;border-right:1px solid rgba(255,255,255,0.08);text-align:center;}
+.cs-result:last-child{border-right:none;}
+.cr-num{font-family:"Cormorant Garamond",serif;font-size:40px;font-weight:300;color:var(--ivory);letter-spacing:-0.02em;line-height:1;display:block;margin-bottom:6px;}
+.cr-label{font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,238,232,0.4);}
+.cs-screenshot{border-top:1px solid var(--rule);overflow:hidden;position:relative;background:var(--ivory-deep);}
+.cs-screenshot img{width:100%;display:block;}
+.cs-screenshot-label{position:absolute;top:20px;left:24px;background:var(--charcoal);color:rgba(242,238,232,0.7);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;padding:5px 12px;}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--rule);margin-top:8px;}
+.stat-cell{padding:20px 16px;border-right:1px solid var(--rule);}
+.stat-cell:last-child{border-right:none;}
+.stat-n{font-family:"Cormorant Garamond",serif;font-size:32px;font-weight:300;color:var(--charcoal);line-height:1;}
+.stat-l{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-top:8px;}
+.process-cell{padding:24px 20px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.process-num{font-family:"Cormorant Garamond",serif;font-size:40px;font-weight:300;color:var(--rule);line-height:1;margin-bottom:12px;}
+.process-title{font-size:11px;font-weight:500;color:var(--charcoal);margin-bottom:6px;}
+.process-desc{font-size:11.5px;color:var(--muted);font-weight:300;line-height:1.6;}
+.testimonial{border-left:2px solid var(--rule);padding:24px 28px;background:var(--ivory-deep);margin-top:8px;}
+.testimonial-quote{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:300;font-style:italic;color:var(--mid);line-height:1.7;margin-bottom:16px;}
+.testimonial-attr{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--caramel);}
+.page-footer{padding:56px;border-top:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;background:var(--charcoal);}
+.pf-left{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:300;color:var(--ivory);letter-spacing:-0.01em;}
+.pf-left em{font-style:italic;color:rgba(242,238,232,0.45);}
+.pf-right{display:flex;gap:16px;flex-direction:column;align-items:flex-end;}
+.btn-cta{background:var(--caramel);color:var(--ivory);padding:14px 32px;font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;font-family:"DM Sans",sans-serif;transition:background 0.2s;}
+.btn-cta:hover{background:var(--caramel-dk);}
+.back-link{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,238,232,0.3);text-decoration:none;transition:color 0.2s;}
+.back-link:hover{color:rgba(242,238,232,0.7);}
+.nav-btn{display:flex;gap:12px;margin-top:32px;}
+.nav-btn a{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--rule);padding:8px 16px;transition:all 0.2s;}
+.nav-btn a:hover{color:var(--charcoal);border-color:var(--charcoal);}
+@media(max-width:900px){
+  nav{padding:0 24px;}
+  .nav-links li:not(:last-child){display:none;}
+  .cs-hero{grid-template-columns:1fr;}
+  .cs-hero-left{padding:72px 24px 40px;border-right:none;}
+  .cs-hero-right{min-height:300px;}
+  .cs-content{grid-template-columns:1fr;}
+  .cs-sidebar{display:none;}
+  .cs-main{padding:40px 24px;}
+  .cs-improvements{grid-template-columns:1fr;}
+  .cs-results-row{flex-direction:column;}
+  .stat-grid{grid-template-columns:1fr 1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .page-footer{padding:40px 24px;flex-direction:column;gap:28px;align-items:flex-start;}
+  .breadcrumb{padding:16px 24px;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">Belle Digital Studio</a>
+  <ul class="nav-links">
+    <li><a href="./index.html" class="active">Work</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../process.html">Process</a></li>
+    <li><a href="../index.html#founder">About</a></li>
+    <li><a href="../contact.html" class="nav-cta-link">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb">
+  <a href="./index.html">Work</a>
+  <span>/</span>
+  <span>Meridian Build Group</span>
+</div>
+
+<div class="cs-hero">
+  <div class="cs-hero-left">
+    <span class="cs-num">01</span>
+    <span class="cs-industry-tag">Construction &middot; Commercial &amp; Residential</span>
+    <h1 class="cs-hero-title">Meridian <em>Build Group</em></h1>
+    <p class="cs-tagline">Full brand identity and website redesign for an 18-year construction firm repositioning from local operator to established commercial builder.</p>
+    <div class="cs-tags-row">
+      <span class="cs-tag">Brand Identity</span>
+      <span class="cs-tag">Web Design</span>
+      <span class="cs-tag">Strategy</span>
+    </div>
+    <div class="nav-btn">
+      <a href="./beacon-people-co.html">Next: Beacon People Co. &rarr;</a>
+    </div>
+  </div>
+  <div class="cs-hero-right">
+    <img src="../assets/images/meridian-build-group-cover.jpg" alt="Construction company website design for Meridian Build Group">
+  </div>
+</div>
+
+<div class="cs-content">
+  <div class="cs-sidebar">
+    <div class="cs-sidebar-section">
+      <span class="cs-sidebar-label">Client</span>
+      <p>Meridian Build Group<br>Sydney, NSW</p>
+    </div>
+    <div class="cs-sidebar-section">
+      <span class="cs-sidebar-label">Industry</span>
+      <p>Commercial &amp;<br>Residential Construction</p>
+    </div>
+    <div class="cs-sidebar-section">
+      <span class="cs-sidebar-label">Scope</span>
+      <ul class="cs-sidebar-list">
+        <li>Brand identity</li>
+        <li>Website design &amp; build</li>
+        <li>Positioning strategy</li>
+        <li>Credential architecture</li>
+      </ul>
+    </div>
+    <div class="cs-sidebar-section">
+      <span class="cs-sidebar-label">Outcome</span>
+      <p>Repositioned from local tradie to credible construction firm attracting developer and architect clients.</p>
+    </div>
+  </div>
+  <div class="cs-main">
+
+    <div class="cs-section">
+      <span class="cs-section-label">Project Snapshot</span>
+      <div class="stat-grid">
+        <div class="stat-cell"><div class="stat-n">18</div><div class="stat-l">Years Experience</div></div>
+        <div class="stat-cell"><div class="stat-n">$240M+</div><div class="stat-l">Projects Delivered</div></div>
+        <div class="stat-cell"><div class="stat-n">100%</div><div class="stat-l">Licensed &amp; Insured</div></div>
+        <div class="stat-cell"><div class="stat-n">60+</div><div class="stat-l">Projects Completed</div></div>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <span class="cs-section-label">The Problem</span>
+      <h3>18 years of expertise. <em>Zero presence.</em></h3>
+      <p>Meridian had an exceptional track record &mdash; $240M+ in delivered projects, fully licensed, deeply experienced. Their website looked like it was built in 2009. Generic template, emoji service icons, no credentials visible.</p>
+      <p>The gap between who they were and how they presented was costing them developer and architect referrals. The kind of clients who research before they call.</p>
+    </div>
+
+    <div class="cs-section">
+      <span class="cs-section-label">The Approach</span>
+      <h3>Dark. Structural. <em>Built to command respect.</em></h3>
+      <p>We chose a dark charcoal palette with raw bronze-gold accents &mdash; industrial precision, not lifestyle warmth. Bold all-caps typography signals structural confidence. Credentials are the hero element, not decorative photography.</p>
+      <p>The identity was built to be instantly trusted by architects, developers, and project managers who make decisions based on track record and proven performance.</p>
+    </div>
+
+    <div class="cs-section">
+      <span class="cs-section-label">Construction Services</span>
+      <h3>Four core <em>capabilities.</em></h3>
+      <div class="process-grid">
+        <div class="process-cell">
+          <div class="process-title">Commercial Construction</div>
+          <div class="process-desc">End-to-end delivery of commercial developments, from early planning to final handover.</div>
+        </div>
+        <div class="process-cell">
+          <div class="process-title">Residential Development</div>
+          <div class="process-desc">Construction of multi-residential and high-end housing developments.</div>
+        </div>
+        <div class="process-cell">
+          <div class="process-title">Design &amp; Construct</div>
+          <div class="process-desc">Integrated project delivery coordinating architects, engineers and construction teams.</div>
+        </div>
+        <div class="process-cell">
+          <div class="process-title">Project Management</div>
+          <div class="process-desc">Structured oversight ensuring quality, timelines and compliance across every stage.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <span class="cs-section-label">Key Improvements</span>
+      <h3>What <em>changed.</em></h3>
+      <div class="cs-improvements">
+        <div class="cs-improvement"><span class="ci-check">&#10003;</span><span class="ci-text">Dark industrial palette commands immediate authority</span></div>
+        <div class="cs-improvement"><span class="ci-check">&#10003;</span><span class="ci-text">Credentials and scale front and centre</span></div>
+        <div class="cs-improvement"><span class="ci-check">&#10003;</span><span class="ci-text">Bold typographic identity &mdash; firm, not a tradie</span></div>
+        <div class="cs-improvement"><span class="ci-check">&#10003;</span><span class="ci-text">Project portfolio architecture with real photography</span></div>
+        <div class="cs-improvement"><span class="ci-check">&#10003;</span><span class="ci-text">Safety &amp; compliance section builds trust with developers</span></div>
+        <div class="cs-improvement"><span class="ci-check">&#10003;</span><span class="ci-text">Enquiry flow built specifically for developer clients</span></div>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <span class="cs-section-label">Results</span>
+      <h3>Measurable <em>outcomes.</em></h3>
+      <div class="cs-results-row">
+        <div class="cs-result"><span class="cr-num">+44%</span><span class="cr-label">Developer Enquiries</span></div>
+        <div class="cs-result"><span class="cr-num">+60%</span><span class="cr-label">Time on Site</span></div>
+        <div class="cs-result"><span class="cr-num">3&times;</span><span class="cr-label">Referral Increase</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="cs-screenshot">
+  <div class="cs-screenshot-label">Website &mdash; Selected Projects &amp; Safety</div>
+  <img loading="lazy" src="../assets/images/meridian-projects-safety.jpg" alt="Meridian Build Group selected projects and safety compliance pages">
+</div>
+
+<div style="background:var(--ivory-deep);padding:48px 56px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);"><div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--charcoal);letter-spacing:-0.01em;">Ready to build something that works for your business?</div><a href="../index.html#cta" style="background:var(--charcoal);color:var(--ivory);padding:13px 28px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;font-family:'DM Sans',sans-serif;flex-shrink:0;">Book a Strategy Call</a></div>
+
+<footer class="page-footer">
+  <div class="pf-left">Next project:<br><em>Beacon People Co.</em></div>
+  <div class="pf-right">
+    <a href="./beacon-people-co.html" class="btn-cta">View Case Study &rarr;</a>
+    <a href="./index.html" class="back-link">&larr; All Work</a>
+  </div>
+  <div style="width:100%;margin-top:18px;padding-top:14px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end;">
+    <a href="../index.html" style="text-decoration:none;color:var(--muted);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">Home</a>
+    <a href="./index.html" style="text-decoration:none;color:var(--muted);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">Work</a>
+    <a href="../index.html#services" style="text-decoration:none;color:var(--muted);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">Services</a>
+    <a href="../process.html" style="text-decoration:none;color:var(--muted);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">Process</a>
+    <a href="../index.html#founder" style="text-decoration:none;color:var(--muted);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">About</a>
+    <a href="../contact.html" style="text-decoration:none;color:var(--muted);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;">Contact</a>
+  </div>
+</footer>
+
+</body></html>

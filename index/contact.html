@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>Contact | Belle Digital Studio</title>
+  <meta name="description" content="Start a project with Belle Digital Studio. Strategic websites for law firms, consultants and professional service businesses in Australia.">
+  <link rel="canonical" href="https://belledigitalstudio.com.au/contact.html" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Belle Digital Studio">
+  <meta property="og:description" content="Start a project with Belle Digital Studio. Strategic websites for established service businesses.">
+  <meta property="og:url" content="https://belledigitalstudio.com.au/contact.html">
+  <meta property="og:site_name" content="Belle Digital Studio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ─────────────────────────────────────
+       DESIGN TOKENS — identical to index.html
+    ───────────────────────────────────── */
+    :root {
+      --ivory:      #F2EEE8;
+      --ivory-deep: #E8E2D9;
+      --rule:       #D4CCC2;
+      --charcoal:   #1A1916;
+      --mid:        #3C3830;
+      --muted:      #7A7368;
+      --faint:      #B2AAA0;
+      --caramel:    #96663E;
+      --caramel-dk: #7A5230;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-size: 14px;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─────────────────────────────────────
+       NAV — exact match to index.html
+    ───────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 64px;
+      background: rgba(242,238,232,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center;
+      padding: 0 56px;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; font-weight: 400;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--charcoal); text-decoration: none;
+    }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 36px; }
+    .nav-links a {
+      font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--charcoal); }
+    .nav-links a.active { color: var(--charcoal); }
+    .nav-cta-link {
+      background: var(--charcoal); color: var(--ivory) !important;
+      padding: 9px 20px; transition: background 0.2s !important;
+    }
+    .nav-cta-link:hover { background: var(--caramel) !important; }
+    .nav-cta-link.active { background: var(--caramel) !important; }
+
+    /* ─────────────────────────────────────
+       PAGE — two-column split, full height
+    ───────────────────────────────────── */
+    .contact-page {
+      padding-top: 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* ─────────────────────────────────────
+       LEFT COLUMN
+    ───────────────────────────────────── */
+    .contact-intro {
+      padding: 96px 64px 80px 56px;
+      border-right: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: sticky;
+      top: 64px;
+      height: calc(100vh - 64px);
+    }
+    .intro-top {}
+
+    .intro-eyebrow {
+      display: flex; align-items: center; gap: 20px;
+      margin-bottom: 40px;
+    }
+    .intro-eyebrow span {
+      font-size: 10px; letter-spacing: 0.24em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .intro-eyebrow-line { width: 40px; height: 1px; background: var(--rule); }
+
+    .contact-intro h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 58px);
+      font-weight: 400; line-height: 1.08;
+      letter-spacing: -0.015em; color: var(--charcoal);
+      margin-bottom: 28px;
+    }
+    .contact-intro h1 em { font-style: italic; font-weight: 300; }
+
+    .intro-sub {
+      font-size: 14px; color: var(--muted); line-height: 1.8;
+      font-weight: 300; max-width: 320px;
+      border-left: 1px solid var(--rule); padding-left: 20px;
+    }
+
+    .intro-bottom {}
+    .intro-details { border-top: 1px solid var(--rule); padding-top: 32px; }
+    .detail-item { margin-bottom: 22px; }
+    .detail-item:last-child { margin-bottom: 0; }
+    .detail-label {
+      display: block;
+      font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 4px;
+    }
+    .detail-value {
+      font-size: 13px; color: var(--mid); font-weight: 300; line-height: 1.5;
+    }
+    .detail-value a {
+      color: var(--mid); text-decoration: none;
+      border-bottom: 1px solid var(--rule); padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .detail-value a:hover { color: var(--caramel); border-color: var(--caramel); }
+    .social-links { list-style: none; display: flex; gap: 10px; margin-top: 8px; }
+    .social-links a {
+      width: 30px; height: 30px;
+      border: 1px solid var(--rule);
+      color: var(--mid); text-decoration: none;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 999px;
+      transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.2s;
+    }
+    .social-links a img {
+      width: 14px; height: 14px; display: block;
+      object-fit: contain;
+    }
+    .social-links a:hover { border-color: var(--caramel); color: var(--caramel); background: var(--ivory-deep); transform: translateY(-1px); }
+
+    /* ─────────────────────────────────────
+       RIGHT COLUMN — FORM
+    ───────────────────────────────────── */
+    .contact-form-wrap {
+      padding: 96px 56px 80px 64px;
+    }
+
+    .form-group { margin-bottom: 44px; }
+    .form-group:last-of-type { margin-bottom: 0; }
+
+    .form-group-label {
+      display: block;
+      font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--faint);
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 28px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 32px;
+    }
+    .field-row.full { grid-template-columns: 1fr; }
+
+    .field {
+      display: flex; flex-direction: column;
+      margin-bottom: 28px;
+    }
+    .field:last-child { margin-bottom: 0; }
+
+    .field label {
+      display: block;
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 10px;
+    }
+    .field label .req { color: var(--caramel); margin-left: 2px; }
+    .field label .opt {
+      color: var(--faint); font-size: 9px;
+      text-transform: none; letter-spacing: 0; margin-left: 6px;
+    }
+
+    /* ── Inputs / Select / Textarea ── */
+    .field input,
+    .field select,
+    .field textarea {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px; font-weight: 300; color: var(--charcoal);
+      background: transparent; border: none;
+      border-bottom: 1px solid var(--rule);
+      padding: 8px 0 13px; outline: none; width: 100%;
+      border-radius: 0; -webkit-appearance: none; appearance: none;
+      transition: border-color 0.2s;
+    }
+    .field input::placeholder, .field textarea::placeholder {
+      color: var(--faint); font-weight: 300;
+    }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus { border-bottom-color: var(--charcoal); }
+    .field input:focus::placeholder,
+    .field textarea:focus::placeholder { color: transparent; }
+    .field input.error,
+    .field textarea.error { border-bottom-color: var(--caramel); }
+
+    /* Custom select arrow */
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: ''; position: absolute; right: 2px; top: 50%;
+      transform: translateY(-50%); pointer-events: none;
+      width: 0; height: 0;
+      border-left: 4px solid transparent; border-right: 4px solid transparent;
+      border-top: 5px solid var(--faint);
+    }
+    .field select { cursor: pointer; }
+    .field select.unset { color: var(--faint); }
+    .field select option { color: var(--charcoal); background: var(--ivory); }
+
+    .field textarea { resize: none; height: 112px; line-height: 1.7; }
+
+    /* ── Submit ── */
+    .form-submit {
+      margin-top: 44px; padding-top: 32px;
+      border-top: 1px solid var(--rule);
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .submit-note {
+      font-size: 11px; color: var(--faint); font-weight: 300;
+      line-height: 1.6; max-width: 240px;
+    }
+    .btn-submit {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+      background: var(--charcoal); color: var(--ivory);
+      border: none; padding: 15px 40px;
+      cursor: pointer; transition: background 0.2s;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .btn-submit:hover { background: var(--caramel); }
+    .btn-submit:active { background: var(--caramel-dk); }
+
+    /* ── Email alternative ── */
+    .email-alt {
+      margin-top: 44px; padding-top: 28px;
+      border-top: 1px solid var(--rule);
+      display: flex; align-items: center; gap: 18px;
+    }
+    .email-alt-rule { flex: 1; height: 1px; background: var(--rule); }
+    .email-alt-label {
+      font-size: 10.5px; color: var(--faint);
+      letter-spacing: 0.06em; white-space: nowrap; flex-shrink: 0;
+    }
+    .email-alt a {
+      font-size: 10.5px; color: var(--muted); text-decoration: none;
+      letter-spacing: 0.04em; border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px; white-space: nowrap; flex-shrink: 0;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .email-alt a:hover { color: var(--caramel); border-color: var(--caramel); }
+
+    /* ── Success state ── */
+    #form-success { display: none; padding: 64px 0; }
+    #form-success.visible { display: block; }
+    .success-glyph {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; color: var(--caramel); margin-bottom: 24px;
+    }
+    #form-success h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 400; color: var(--charcoal);
+      letter-spacing: -0.01em; margin-bottom: 16px;
+    }
+    #form-success p {
+      font-size: 14px; color: var(--muted);
+      font-weight: 300; line-height: 1.8; max-width: 360px;
+    }
+
+    /* ─────────────────────────────────────
+       FOOTER — exact match to index.html
+    ───────────────────────────────────── */
+    footer {
+      background: var(--charcoal);
+      padding: 52px 56px 40px;
+    }
+    .footer-row {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      margin-bottom: 20px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.3em;
+      text-transform: uppercase; color: rgba(242,238,232,0.4);
+      text-decoration: none;
+    }
+    .footer-nav { list-style: none; display: flex; gap: 28px; }
+    .footer-nav a {
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(242,238,232,0.2); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: rgba(242,238,232,0.5); }
+    footer .social-links { margin-top: 0; }
+    footer .social-links a {
+      border-color: transparent;
+      background: rgba(242,238,232,0.9);
+    }
+    footer .social-links a:hover {
+      border-color: rgba(242,238,232,0.35);
+      background: rgba(242,238,232,1);
+    }
+    .footer-bottom {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+    }
+    .footer-copy, .footer-loc {
+      font-size: 10px; color: rgba(242,238,232,0.15); letter-spacing: 0.08em;
+    }
+
+    /* ─────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links li:not(:last-child) { display: none; }
+
+      .contact-page { grid-template-columns: 1fr; }
+
+      .contact-intro {
+        position: static; height: auto;
+        padding: 72px 24px 48px;
+        border-right: none; border-bottom: 1px solid var(--rule);
+      }
+      .intro-bottom { margin-top: 48px; }
+
+      .contact-form-wrap { padding: 48px 24px 72px; }
+
+      .field-row { grid-template-columns: 1fr; gap: 0; }
+      .form-submit { flex-direction: column; align-items: flex-start; }
+      .email-alt { flex-wrap: wrap; }
+
+      footer { padding: 40px 24px 32px; }
+      .footer-row {
+        flex-direction: column; align-items: flex-start; gap: 20px;
+      }
+      .footer-bottom { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Belle Digital Studio</a>
+    <ul class="nav-links">
+      <li><a href="case-studies/">Work</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="index.html#founder">About</a></li>
+      <li><a href="contact.html" class="nav-cta-link active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN LAYOUT -->
+  <div class="contact-page">
+
+    <!-- LEFT: INTRO -->
+    <div class="contact-intro">
+      <div class="intro-top">
+        <div class="intro-eyebrow">
+          <span>Belle Digital Studio · Contact</span>
+          <div class="intro-eyebrow-line"></div>
+        </div>
+        <h1>Let's create<br>something <em>exceptional.</em></h1>
+        <p class="intro-sub">Tell me about your project and I'll get back to you within 1–2 business days.</p>
+      </div>
+
+      <div class="intro-bottom">
+        <div class="intro-details">
+          <div class="detail-item">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">
+              <a href="mailto:belledigitalstudio@gmail.com">belledigitalstudio@gmail.com</a>
+            </span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">Sydney, New South Wales, Australia</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Response time</span>
+            <span class="detail-value">Within 1–2 business days</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Availability</span>
+            <span class="detail-value">Currently accepting new clients for Q3 2025</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Social</span>
+            <ul class="social-links">
+              <li><a href="https://www.instagram.com/belledigitalstudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100073433022097" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a></li>
+              <li><a href="https://www.linkedin.com/in/alison-belle-14b60325a/?locale=en_US" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt=""></a></li>
+              <li><a href="https://github.com/alisonb-commits" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/icons/github.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="contact-form-wrap">
+
+      <form id="contact-form" novalidate>
+
+        <!-- Group 1: About You -->
+        <div class="form-group">
+          <span class="form-group-label">About You</span>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-name">Name <span class="req">*</span></label>
+              <input type="text" id="f-name" name="name"
+                     placeholder="Your full name"
+                     autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email <span class="req">*</span></label>
+              <input type="email" id="f-email" name="email"
+                     placeholder="your@email.com"
+                     autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-brand">Business / Brand Name</label>
+              <input type="text" id="f-brand" name="brand"
+                     placeholder="Your business name"
+                     autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="f-website">
+                Website <span class="opt">(optional)</span>
+              </label>
+              <input type="url" id="f-website" name="website"
+                     placeholder="https://yoursite.com"
+                     autocomplete="url">
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 2: Your Project -->
+        <div class="form-group">
+          <span class="form-group-label">Your Project</span>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-type">Project Type</label>
+              <div class="select-wrap">
+                <select id="f-type" name="project_type" class="unset"
+                        onchange="this.classList.remove('unset')">
+                  <option value="" disabled selected>Select a type</option>
+                  <option value="website-design">Website Design</option>
+                  <option value="brand-identity">Brand Identity</option>
+                  <option value="website-branding">Website + Branding</option>
+                  <option value="creative-direction">Creative Direction</option>
+                  <option value="something-else">Something Else</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-budget">Budget Range</label>
+              <div class="select-wrap">
+                <select id="f-budget" name="budget" class="unset"
+                        onchange="this.classList.remove('unset')">
+                  <option value="" disabled selected>Select a range</option>
+                  <option value="2k-5k">$2k – $5k</option>
+                  <option value="5k-10k">$5k – $10k</option>
+                  <option value="10k+">$10k+</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-timeline">Timeline</label>
+              <div class="select-wrap">
+                <select id="f-timeline" name="timeline" class="unset"
+                        onchange="this.classList.remove('unset')">
+                  <option value="" disabled selected>Select a timeline</option>
+                  <option value="asap">ASAP</option>
+                  <option value="1-2-months">1–2 Months</option>
+                  <option value="flexible">Flexible</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 3: Project Details -->
+        <div class="form-group">
+          <span class="form-group-label">Project Details</span>
+          <div class="field-row full">
+            <div class="field">
+              <label for="f-details">Tell me about your project</label>
+              <textarea id="f-details" name="details"
+                placeholder="What are you looking to build, change or improve? Share as much or as little as you like."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-submit">
+          <p class="submit-note">All enquiries are handled directly by Alison. No account managers, no handoffs.</p>
+          <button type="submit" class="btn-submit">Send Enquiry</button>
+        </div>
+
+      </form>
+
+      <!-- Success state -->
+      <div id="form-success">
+        <span class="success-glyph">✦</span>
+        <h2>Enquiry received.</h2>
+        <p>Thank you for reaching out. I'll be in touch within 1–2 business days. In the meantime, feel free to explore the studio's work.</p>
+      </div>
+
+      <!-- Email fallback -->
+      <div class="email-alt">
+        <div class="email-alt-rule"></div>
+        <span class="email-alt-label">Prefer email?</span>
+        <a href="mailto:belledigitalstudio@gmail.com">belledigitalstudio@gmail.com</a>
+        <div class="email-alt-rule"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+  <div class="footer-row">
+    <a href="index.html" class="footer-logo">Belle Digital Studio</a>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="case-studies/">Work</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="index.html#founder">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul class="social-links">
+      <li><a href="https://www.instagram.com/belledigitalstudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100073433022097" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a></li>
+      <li><a href="https://www.linkedin.com/in/alison-belle-14b60325a/?locale=en_US" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt=""></a></li>
+      <li><a href="https://github.com/alisonb-commits" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/icons/github.svg" alt=""></a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Belle Digital Studio. All rights reserved.</span>
+    <span class="footer-loc">Sydney, New South Wales, Australia</span>
+  </div>
+</footer>
+
+  <script>
+    const form    = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+
+    function flagError(id) {
+      const el = document.getElementById(id);
+      el.classList.add('error');
+      el.focus();
+      el.addEventListener('input', () => el.classList.remove('error'), { once: true });
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name  = document.getElementById('f-name').value.trim();
+      const email = document.getElementById('f-email').value.trim();
+
+      if (!name)                        { flagError('f-name');  return; }
+      if (!email || !email.includes('@')) { flagError('f-email'); return; }
+
+      const brand    = document.getElementById('f-brand').value.trim();
+      const website  = document.getElementById('f-website').value.trim();
+      const type     = document.getElementById('f-type').value;
+      const budget   = document.getElementById('f-budget').value;
+      const timeline = document.getElementById('f-timeline').value;
+      const details  = document.getElementById('f-details').value.trim();
+
+      const lines = [
+        'Name: '  + name,
+        'Email: ' + email,
+        brand    ? 'Business: '     + brand    : null,
+        website  ? 'Website: '      + website  : null,
+        type     ? 'Project Type: ' + type     : null,
+        budget   ? 'Budget: '       + budget   : null,
+        timeline ? 'Timeline: '     + timeline : null,
+        details  ? '\nProject Details:\n' + details : null,
+      ].filter(Boolean).join('\n');
+
+      const subject = encodeURIComponent('Project Enquiry — ' + (brand || name));
+      const body    = encodeURIComponent(lines);
+
+      window.location.href = 'mailto:belledigitalstudio@gmail.com?subject=' + subject + '&body=' + body;
+
+      setTimeout(function () {
+        form.style.display = 'none';
+        success.classList.add('visible');
+      }, 600);
+    });
+  </script>
+
+</body>
+</html>

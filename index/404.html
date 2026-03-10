@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>Page Not Found | Belle Digital Studio</title>
+  <meta name="description" content="The page you’re looking for can’t be found. Return to Belle Digital Studio home, case studies, or contact page.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://belledigitalstudio.com.au/404.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F2EEE8;
+    --ivory-deep: #E8E2D9;
+    --rule: #D4CCC2;
+    --charcoal: #1A1916;
+    --muted: #7A7368;
+    --caramel: #96663E;
+    --caramel-dk: #7A5230;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--ivory);
+    color: var(--charcoal);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: 64px;
+    background: rgba(242,238,232,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 56px;
+  }
+  .nav-logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px; font-weight: 400;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--charcoal); text-decoration: none;
+  }
+  .nav-links { list-style: none; display: flex; align-items: center; gap: 36px; }
+  .nav-links a {
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-cta-link {
+    color: var(--ivory) !important;
+    background: var(--charcoal);
+    padding: 9px 20px;
+    transition: background 0.2s !important;
+  }
+  .nav-cta-link:hover { background: var(--caramel) !important; }
+
+  .error-wrap {
+    min-height: 100vh;
+    padding: 64px 56px 0;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .error-main {
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 56px 60px 0;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(56px, 9vw, 120px);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .copy {
+    max-width: 520px;
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--muted);
+    border-left: 1px solid var(--rule);
+    padding-left: 20px;
+    margin-bottom: 36px;
+  }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 13px 26px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--charcoal);
+    color: var(--ivory);
+  }
+  .btn-primary:hover { background: var(--caramel); }
+  .btn-secondary {
+    border: 1px solid var(--rule);
+    color: var(--charcoal);
+  }
+  .btn-secondary:hover {
+    border-color: var(--charcoal);
+  }
+
+  .error-side {
+    padding: 72px 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 26px;
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--ivory-deep) 100%);
+  }
+  .side-title {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .side-list { list-style: none; display: grid; gap: 10px; }
+  .side-list a {
+    color: var(--charcoal);
+    text-decoration: none;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    transition: color 0.2s;
+  }
+  .side-list a:hover { color: var(--caramel); }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links li:not(:last-child) { display: none; }
+    .error-wrap {
+      grid-template-columns: 1fr;
+      padding: 64px 24px 0;
+    }
+    .error-main {
+      border-right: none;
+      border-bottom: 1px solid var(--rule);
+      padding: 56px 0;
+    }
+    .error-side {
+      padding: 40px 0 56px;
+      background: transparent;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Belle Digital Studio</a>
+  <ul class="nav-links">
+    <li><a href="case-studies/">Work</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="index.html#founder">About</a></li>
+    <li><a href="contact.html" class="nav-cta-link">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="error-wrap">
+  <section class="error-main">
+    <span class="eyebrow">Error 404</span>
+    <h1>Page<br>Not Found</h1>
+    <p class="copy">The page you tried to reach no longer exists or has moved. You can return home, view recent work, or get in touch and I’ll point you in the right direction.</p>
+    <div class="actions">
+      <a href="index.html" class="btn btn-primary">Go to Homepage</a>
+      <a href="case-studies/" class="btn btn-secondary">View Work</a>
+    </div>
+  </section>
+
+  <aside class="error-side">
+    <span class="side-title">Quick Links</span>
+    <ul class="side-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="case-studies/">Case Studies</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </aside>
+</main>
+
+</body>
+</html>
