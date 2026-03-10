@@ -36,9 +36,5 @@
     <priority>0.7</priority>
   </url>
 
-  <url>
-    <loc>https://belledigitalstudio.com/404.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
+
 </urlset>
