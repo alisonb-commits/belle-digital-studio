@@ -441,6 +441,23 @@
   }
   .founder-text h2 em { font-style: italic; font-weight: 300; color: var(--caramel); }
   .founder-text p { font-size: 14px; color: var(--mid); line-height: 1.85; font-weight: 300; margin-bottom: 16px; max-width: 480px; }
+  .founder-technical-note { margin-top: 10px; }
+  .founder-portfolio-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(26,25,22,0.16);
+    padding-bottom: 3px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .founder-portfolio-link:hover {
+    color: var(--caramel);
+    border-color: rgba(150,102,62,0.5);
+  }
   .founder-creds { display: flex; margin-top: 36px; border: 1px solid var(--rule); }
   .cred-item { padding: 14px 20px; border-right: 1px solid var(--rule); flex: 1; }
   .cred-item:last-child { border-right: none; }
@@ -562,9 +579,24 @@
   .footer-bottom {
     max-width: 1080px; margin: 0 auto;
     padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.04);
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+    gap: 10px 24px;
   }
   .footer-copy, .footer-loc { font-size: 10px; color: rgba(242,238,232,0.15); letter-spacing: 0.08em; }
+  .footer-secondary-link {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(242,238,232,0.2);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .footer-secondary-link:hover {
+    color: rgba(242,238,232,0.55);
+    border-color: rgba(242,238,232,0.3);
+  }
 
   /* REVEAL */
   .reveal { opacity: 1; transform: none; }
@@ -1446,6 +1478,8 @@
       <p>Designer, developer, and systems strategist.</p>
       <p>With a background in both visual design and information technology, Alison brings a rare balance of creative refinement and technical precision — ensuring every project is both visually compelling and structurally sound.</p>
       <p>Belle Digital Studio was built on a single conviction: service businesses deserve a digital presence as credible and considered as the work they actually deliver.</p>
+      <p class="founder-technical-note">I also build full-stack applications and experimental interfaces.</p>
+      <a href="https://portfolio-website1-delta-two.vercel.app/" class="founder-portfolio-link" target="_blank" rel="noopener noreferrer">Explore Full Portfolio →</a>
       <div class="founder-creds">
         <div class="cred-item"><span class="cred-title">Background</span><span class="cred-detail">Visual Design &amp; IT</span></div>
         <div class="cred-item"><span class="cred-title">Specialisation</span><span class="cred-detail">Service Businesses</span></div>
@@ -1493,6 +1527,7 @@
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">© 2025 Belle Digital Studio. All rights reserved.</span>
+    <a href="https://portfolio-website1-delta-two.vercel.app/" class="footer-secondary-link" target="_blank" rel="noopener noreferrer">Explore Full Portfolio →</a>
     <span class="footer-loc">Sydney, New South Wales, Australia</span>
   </div>
 </footer>

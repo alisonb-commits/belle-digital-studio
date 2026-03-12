@@ -341,10 +341,25 @@
     }
     .footer-bottom {
       max-width: 1080px; margin: 0 auto;
-      display: flex; justify-content: space-between;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+      gap: 10px 24px;
     }
     .footer-copy, .footer-loc {
       font-size: 10px; color: rgba(242,238,232,0.15); letter-spacing: 0.08em;
+    }
+    .footer-secondary-link {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(242,238,232,0.2);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .footer-secondary-link:hover {
+      color: rgba(242,238,232,0.5);
+      border-color: rgba(242,238,232,0.28);
     }
 
     /* ─────────────────────────────────────
@@ -584,6 +599,7 @@
   </div>
   <div class="footer-bottom">
     <span class="footer-copy">© 2025 Belle Digital Studio. All rights reserved.</span>
+    <a href="https://portfolio-website1-delta-two.vercel.app/" class="footer-secondary-link" target="_blank" rel="noopener noreferrer">Explore Full Portfolio →</a>
     <span class="footer-loc">Sydney, New South Wales, Australia</span>
   </div>
 </footer>
